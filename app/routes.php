@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function(){
+  $applications = DB::table('tbl_entry')->get(); // 1
+  return $applications;
 });

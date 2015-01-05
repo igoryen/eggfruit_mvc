@@ -1,0 +1,2 @@
+1. access table 'tbl_entry' and get everything
+  SELECT * FROM tbl_entry
