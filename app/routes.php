@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('applications', 'ApplicationsController@index');
+
 Route::get('/', function(){
   $applications = DB::table('tbl_entry')->get(); // 1
   return $applications;
