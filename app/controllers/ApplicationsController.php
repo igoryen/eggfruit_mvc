@@ -25,9 +25,8 @@ class ApplicationsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
-		//
+	public function create(){
+		return View::make('applications.create');
 	}
 
 
@@ -36,10 +35,19 @@ class ApplicationsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
-		//
-	}
+	public function store(){
+		$input = Input::all();
+    if(! $this->application->fill($input)->isValid()){
+      return Redirect::back()->withInput()->withErrors($this->application->errmsgs);
+    }
+    $validation = Validator::make(Input::all(), Application::$val_rules);
+    if($validation->fails()){
+      return Redirect::back()->withInput()->withErrors($validation->messages());
+    }
+    $this->application->save();
+    return Redirect::route('applications.index');
+   }
+	
 
 
 	/**
