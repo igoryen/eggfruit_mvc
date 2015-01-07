@@ -10,11 +10,19 @@
   
   @if($applications->count())
     @foreach($applications as $application)
-      <li>
-        {{ link_to("/applications/{$application->ent_company_name}",
-                  $application->ent_company_name) 
+      <div>
+        {{ $application->ent_applied_date }}
+        {{ link_to("{$application->ent_company_url}",
+                  $application->ent_company_name,
+                  array( 'id'=> 'ent_company_url', 'target'=>'blank')
+                  ) 
+        }} - 
+        {{ link_to("{$application->ent_job_posting_url}",
+                  $application->ent_position_name,
+                  array( 'id'=> 'ent_job_posting_url', 'target'=>'blank')
+                  )
         }}
-      </li>
+      </div>
     @endforeach
   @else
     <li>

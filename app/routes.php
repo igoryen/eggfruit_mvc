@@ -14,6 +14,7 @@ Route::resource('applications', 'ApplicationsController');
 //Route::get('applications', 'ApplicationsController@index');
 
 Route::get('/', function(){
-  $applications = Application::orderBy('ent_applied_date', 'desc')->get();
-  return View::make('applications.index', ['applications' => $applications]);
+  return "hi";
+  //$applications = Application::orderBy('ent_applied_date', 'desc')->get();
+  //return View::make('applications.index', ['applications' => $applications]);
 });
