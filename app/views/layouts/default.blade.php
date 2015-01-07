@@ -5,6 +5,10 @@
     <title>Eggfruit</title>
   </head>
   <body>
+    {{ link_to_route('applications.index', 'Applications') }}
+     | 
+    {{ link_to_route('applications.create', 'Create') }}
+    
     
     @yield('header')
     
