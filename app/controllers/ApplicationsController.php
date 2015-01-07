@@ -14,7 +14,7 @@ class ApplicationsController extends \BaseController {
    * @return Response
    */
   public function index(){
-    $applications = Application::orderBy('ent_applied_date', 'desc')->get();
+    $applications = Application::orderBy('ent_company_name', 'asc')->get();
     return View::make('applications.index', ['applications' => $applications]);
   }
 

@@ -8,22 +8,26 @@
 
   <h1>My applications</h1>
   
+    
+  
   @if($applications->count())
+    <table>  
     @foreach($applications as $application)
-      <div>
-        {{ $application->ent_applied_date }}
-        {{ link_to("{$application->ent_company_url}",
+    <tr>
+      <td>{{ $application->ent_applied_date }}</td>
+      <td>{{ link_to("{$application->ent_company_url}",
                   $application->ent_company_name,
                   array( 'id'=> 'ent_company_url', 'target'=>'blank')
                   ) 
-        }} - 
-        {{ link_to("{$application->ent_job_posting_url}",
+          }}</td> 
+      <td>{{ link_to("{$application->ent_job_posting_url}",
                   $application->ent_position_name,
                   array( 'id'=> 'ent_job_posting_url', 'target'=>'blank')
                   )
-        }}
-      </div>
+          }}</td>
+    </tr>
     @endforeach
+    </table>
   @else
     <li>
       Unfortunately, there are no applications.
