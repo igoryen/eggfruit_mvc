@@ -2,14 +2,21 @@
 
 class ApplicationsController extends \BaseController {
 
-	/**
+  protected $application;
+  
+  public function __construct(Application $application) {
+    $this->application = $application;
+  }
+
+  /**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		//
+	public function index(){
+		echo "in ApplicationsController@index()";
+    $applications = $this->application->all();
+    return View::make('applications.index', ['applications' => $applications]);
 	}
 
 

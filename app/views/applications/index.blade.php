@@ -15,6 +15,7 @@
                   $application->ent_company_name) 
         }}
       </li>
+    @endforeach
   @else
     <li>
       Unfortunately, there are no applications.

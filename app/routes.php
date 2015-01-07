@@ -10,10 +10,10 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
-Route::get('applications', 'ApplicationsController@index');
+Route::resource('applications', 'ApplicationsController');
+//Route::get('applications', 'ApplicationsController@index');
 
 Route::get('/', function(){
-  $applications = DB::table('tbl_entry')->get(); // 1
-  return $applications;
+  $applications = Application::orderBy('ent_applied_date', 'desc')->get();
+  return View::make('applications.index', ['applications' => $applications]);
 });

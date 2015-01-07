@@ -8,7 +8,7 @@ class Application extends Eloquent implements RemindableInterface{
   //public $timestamps = false;
   //public static $valid_rules =
   public $errmsgs;
-  protected $table = 'entries';
+  protected $table = 'tbl_entry';
   
   public function isValid(){
     $validator = Validator::make($this->attribute, static::$val_rules);
