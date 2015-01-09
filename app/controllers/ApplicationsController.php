@@ -15,9 +15,8 @@ class ApplicationsController extends \BaseController {
    */
   public function index(){
     $applications = Application::orderBy('ent_company_name', 'asc')->get();
-    return View::make('applications.index', ['applications' => $applications]);
+    return View::make('applications.index', compact('applications'));
   }
-
 
   /**
    * Show the form for creating a new resource.
