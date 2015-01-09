@@ -1,2 +1,4 @@
 1. access table 'tbl_entry' and get everything
   SELECT * FROM tbl_entry
+2. retrieve the GETed variable $sortby containing which field to sort by
+3. retrieve the GETed variable $order containing which direction to sort (ASC or DESC)

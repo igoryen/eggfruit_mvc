@@ -14,8 +14,18 @@ class ApplicationsController extends \BaseController {
    * @return Response
    */
   public function index(){
-    $applications = Application::orderBy('ent_company_name', 'asc')->get();
-    return View::make('applications.index', compact('applications'));
+    $sortby = Input::get('sortby'); // 2
+    $order = Input::get('order'); // 3
+    
+    if($sortby && $order){
+      $applications = $this->application->orderBy($sortby, $order)->get();
+    }
+    else{
+      $applications = $this->application->get();
+    }
+    
+    return View::make('applications.index', 
+                      compact('applications', 'sortby', 'order'));
   }
 
   /**

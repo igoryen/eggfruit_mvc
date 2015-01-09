@@ -12,6 +12,58 @@
   
   @if($applications->count())
     <table>  
+      <thead>
+        <tr>
+          <th>
+            @if($sortby == 'date' && $order == 'desc'){{
+              link_to_action(
+                'ApplicationsController@index',
+                'Date',
+                array(
+                  'sortby' => 'ent_applied_date',
+                  'order' => 'asc'
+                )
+              )
+            }}
+            @else{{
+              link_to_action(
+                'ApplicationsController@index',
+                'Date',
+                array(
+                  'sortby' => 'ent_applied_date',
+                  'order' => 'desc'
+                )
+              )
+            }}
+            @endif
+          </th>
+          <th>
+            @if($sortby == 'company' && $order == 'asc'){{
+              link_to_action(
+                'ApplicationsController@index',
+                'Company',
+                array(
+                  'sortby' => 'ent_company_name',
+                  'order' => 'desc'
+                )
+              )
+            }}
+            @else{{
+              link_to_action(
+                'ApplicationsController@index',
+                'Company',
+                array(
+                  'sortby' => 'ent_company_name',
+                  'order' => 'asc'
+                )
+              )
+            }}
+            @endif
+          </th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
     @foreach($applications as $application)
     <tr>
       <td>{{ $application->ent_applied_date }}</td>
@@ -27,6 +79,7 @@
           }}</td>
     </tr>
     @endforeach
+      </tbody>
     </table>
   @else
     <li>
