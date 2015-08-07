@@ -2,10 +2,21 @@
 
 @section('content')
 
-  <h2>Record a new application</h2>
+  <h2>Edit an application</h2>
   
-  {{ Form::open(['route' => 'applications.store']) }}
-  
+  {{  
+    Form::model(
+      $application,
+      array(
+        //'route' => array(
+          'applications.edit', 
+          $application->primaryKey
+        )
+      //)
+      ,array('method' => 'put')
+    ) 
+  }}
+    
   <table>
   
     <tr>
@@ -44,7 +55,7 @@
     </tr>
   
     <tr>
-      <td>{{ Form::submit('Save the application') }}</td>
+      <td>{{ Form::submit('Save the Edit') }}</td>
     </tr>
   </table>
   {{ Form::close() }}

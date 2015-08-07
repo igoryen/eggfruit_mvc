@@ -7,19 +7,20 @@ class Application extends Eloquent implements RemindableInterface{
   use RemindableTrait;
   public $timestamps = false;
   protected $fillable = [
-      'ent_applied_date',
-      'ent_position_name',
-      'ent_job_posting_url',
-      'ent_company_name',
-      'ent_company_url'
+      'applied_date',
+      'position_name',
+      'job_posting_url',
+      'company_name',
+      'company_url'
   ];
   public static $val_rules = [
-      'ent_applied_date' => 'required',
-      'ent_position_name' => 'required',
-      'ent_company_name' => 'required'
+      'applied_date' => 'required',
+      'position_name' => 'required',
+      'company_name' => 'required'
   ];
   public $errmsgs;
-  protected $table = 'tbl_entry';
+  protected $table = 'entry';
+  protected $primaryKey = "id"; // 4
   
   public function isValid(){
     $validator = Validator::make($this->attributes, static::$val_rules);

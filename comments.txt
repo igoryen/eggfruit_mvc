@@ -2,3 +2,6 @@
   SELECT * FROM tbl_entry
 2. retrieve the GETed variable $sortby containing which field to sort by
 3. retrieve the GETed variable $order containing which direction to sort (ASC or DESC)
+4. Defining the primaryKey property. 
+    It is used to override the convention in which Eloquent assumes 
+    that each table has a primary key column named 'id'. 

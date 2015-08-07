@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -14,6 +13,25 @@ Route::resource('applications', 'ApplicationsController');
 //Route::get('applications', 'ApplicationsController@index');
 
 Route::get('/', function(){
+  // return "Hi!"; # for testing
   //$applications = Application::orderBy('ent_applied_date', 'desc')->get();
   return View::make('index');
 });
+
+Route::get('edit', 
+  function() { 
+    $application = Application::find(1); 
+    return View::make('applications.edit')->with(compact('application'));
+  }
+);
+
+Route::get(
+  'applications.update', 
+  array(
+    'as'=>'applications.update', 
+    function() { 
+      dd(Input::all());
+    }
+  )
+);
+  

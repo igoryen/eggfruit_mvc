@@ -14,13 +14,14 @@
     <table>  
       <thead>
         <tr>
+          <th></th>
           <th>
             @if($sortby == 'date' && $order == 'desc'){{
               link_to_action(
                 'ApplicationsController@index',
                 'Date',
                 array(
-                  'sortby' => 'ent_applied_date',
+                  'sortby' => 'applied_date',
                   'order' => 'asc'
                 )
               )
@@ -30,7 +31,7 @@
                 'ApplicationsController@index',
                 'Date',
                 array(
-                  'sortby' => 'ent_applied_date',
+                  'sortby' => 'applied_date',
                   'order' => 'desc'
                 )
               )
@@ -43,7 +44,7 @@
                 'ApplicationsController@index',
                 'Company',
                 array(
-                  'sortby' => 'ent_company_name',
+                  'sortby' => 'company_name',
                   'order' => 'desc'
                 )
               )
@@ -53,7 +54,7 @@
                 'ApplicationsController@index',
                 'Company',
                 array(
-                  'sortby' => 'ent_company_name',
+                  'sortby' => 'company_name',
                   'order' => 'asc'
                 )
               )
@@ -66,15 +67,24 @@
       <tbody>
     @foreach($applications as $application)
     <tr>
-      <td>{{ $application->ent_applied_date }}</td>
-      <td>{{ link_to("{$application->ent_company_url}",
-                  $application->ent_company_name,
-                  array( 'id'=> 'ent_company_url', 'target'=>'blank')
+      <td>{{ link_to_route(
+                'applications.edit', 
+                'Edit',
+                array($application->entry_id), 
+                array('class' => 'btn btn-info')) 
+      }}</td>
+      <td>{{  link_to(
+                "/applications/{$application->id}", 
+                $application->applied_date) 
+      }}</td>
+      <td>{{ link_to("{$application->company_url}",
+                  $application->company_name,
+                  array( 'id'=> 'company_url', 'target'=>'blank')
                   ) 
           }}</td> 
-      <td>{{ link_to("{$application->ent_job_posting_url}",
-                  $application->ent_position_name,
-                  array( 'id'=> 'ent_job_posting_url', 'target'=>'blank')
+      <td>{{ link_to("{$application->job_posting_url}",
+                  $application->position_name,
+                  array( 'id'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
     </tr>

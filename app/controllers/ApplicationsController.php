@@ -64,9 +64,9 @@ class ApplicationsController extends \BaseController {
    * @param  int  $id
    * @return Response
    */
-  public function show($id)
-  {
-    //
+  public function show($id){
+    $app = $this->application->find($id);
+    return View::make('applications.show', ['application' => $app]);
   }
 
 
@@ -76,9 +76,15 @@ class ApplicationsController extends \BaseController {
    * @param  int  $id
    * @return Response
    */
-  public function edit($id)
-  {
-    //
+  public function edit($id){
+    $application = $this->application->find($id);
+
+    if (is_null($application)){
+      return Redirect::route('applications.index');
+    }
+    return View::make(
+      'applications.edit', 
+      compact('application'));
   }
 
 
@@ -88,9 +94,18 @@ class ApplicationsController extends \BaseController {
    * @param  int  $id
    * @return Response
    */
-  public function update($id)
-  {
-    //
+  public function update($id){
+    $input = Input::all();
+    $validation = Validator::make($input, Application::$val_rules);
+    if($validation->passes()){
+      $app = $this->application->find($id);
+      $app->update($input);
+      return Redirect::route('applications.show', $id);
+    }
+    return Redirect::route('applications.edit', $id)
+      ->withInput()
+      ->withErrors($validation)
+      ->withMessage('message', "Validation errors!");
   }
 
 
@@ -105,5 +120,21 @@ class ApplicationsController extends \BaseController {
     //
   }
 
+  // Methods to do test show() and edit()
+  // 
+  // applications/1
+  public function testShow(){
+    $this->mock->shouldReceive('find')
+               ->once()
+               ->with(1);
 
+    $this->call('GET', 'applications/1');
+    $this->assertResponseOk();
+  }
+  // applications/1/edit
+  public function testEdit(){
+    $this->call('GET', 'applications/1/edit');
+    $this->assertResponseOk();
+  }
+  
 }
