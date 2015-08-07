@@ -70,7 +70,7 @@
       <td>{{ link_to_route(
                 'applications.edit', 
                 'Edit',
-                array($application->entry_id), 
+                array($application->id), 
                 array('class' => 'btn btn-info')) 
       }}</td>
       <td class="applic_table_date_cell">{{  link_to(
