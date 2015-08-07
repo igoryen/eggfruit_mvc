@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    {{HTML::style('css/eggfruit.css')}}
     <title>Eggfruit</title>
   </head>
   <body>

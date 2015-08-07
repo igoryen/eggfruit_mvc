@@ -73,16 +73,16 @@
                 array($application->entry_id), 
                 array('class' => 'btn btn-info')) 
       }}</td>
-      <td>{{  link_to(
+      <td class="applic_table_date_cell">{{  link_to(
                 "/applications/{$application->id}", 
                 $application->applied_date) 
       }}</td>
-      <td>{{ link_to("{$application->company_url}",
+      <td class="applic_table_cell">{{ link_to("{$application->company_url}",
                   $application->company_name,
                   array( 'id'=> 'company_url', 'target'=>'blank')
                   ) 
           }}</td> 
-      <td>{{ link_to("{$application->job_posting_url}",
+      <td class="applic_table_cell">{{ link_to("{$application->job_posting_url}",
                   $application->position_name,
                   array( 'id'=> 'job_posting_url', 'target'=>'blank')
                   )

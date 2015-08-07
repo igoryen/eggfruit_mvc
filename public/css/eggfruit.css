@@ -1,0 +1,55 @@
+body{
+  /*font-family: sans-serif, Calibri;*/
+  /*font-family: "Georgia" , serif ;*/
+  font-family: "Verdana", sans-serif;
+  font-size: x-small;
+}
+.desktop{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.crossed_row{
+  display: table-row;
+  background-color: lightgray;
+  padding-bottom: 3px;
+  border-style: solid;
+  border-color: #0000ff;
+  color: gray;
+  font-style: italic;
+}
+img{
+  /*         [direction (inset)] [color] [Horizontal Distance] [Vertical Distance] [size]; 
+*/
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+}
+.row{
+  display: table-row;
+  padding-bottom: 3px;
+  /*border-style: solid;*/
+  /*border-color: #0000ff;*/
+}
+.applic_table_cell{
+  display: table-cell;
+
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-bottom-color: lightgray;
+}
+.applic_table_date_cell{
+  display: table-cell;
+  width: 100px;
+  color: red;
+
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-bottom-color: lightgray;
+}
+.applic_table_ivdate_cell{
+  display: table-cell;
+  width: 100px;
+  color: red;
+}
+.applic_table_response_cell{
+  display: table-cell;
+  width: 100px;
+}
