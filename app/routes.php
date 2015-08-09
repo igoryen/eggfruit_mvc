@@ -25,13 +25,12 @@ Route::get('edit',
   }
 );
 
-Route::get(
-  'applications.update', 
-  array(
-    'as'=>'applications.update', 
-    function() { 
-      dd(Input::all());
-    }
-  )
+Route::post(
+  'applications/{id}/update', 
+  ['as'=>'applications.update', 'uses' => 'ApplicationsController@update']
+//    function() { 
+//       dd(Input::all());
+//      
+//    }
 );
   
