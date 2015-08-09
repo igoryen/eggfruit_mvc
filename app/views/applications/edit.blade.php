@@ -6,14 +6,9 @@
   
   {{  
     Form::model(
-      $application,
-      array(
-        'route' => array(
-          'applications.update',
-          $application->id
-        )
-      )
-      ,array('method' => 'put')
+      $application, 
+      ['route' => ['applications.update', $application->id]],
+      ['method' => 'put']
     ) 
   }}
     
