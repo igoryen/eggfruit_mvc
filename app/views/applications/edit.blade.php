@@ -8,11 +8,11 @@
     Form::model(
       $application,
       array(
-        //'route' => array(
-          'applications.edit', 
-          $application->primaryKey
+        'route' => array(
+          'applications.update',
+          $application->id
         )
-      //)
+      )
       ,array('method' => 'put')
     ) 
   }}
