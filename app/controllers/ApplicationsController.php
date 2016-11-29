@@ -21,7 +21,7 @@ class ApplicationsController extends \BaseController {
       $applications = $this->application->orderBy($sortby, $order)->get();
     }
     else{
-      $applications = $this->application->get();
+      $applications = $this->application->orderBy('applied_date', 'desc')->get();
     }
     
     return View::make('applications.index', 

@@ -12,6 +12,16 @@
       <td>{{ Form::label('applied_date', 'App date') }}</td>
       <td>{{ Form::text('applied_date') }}</td>
       <td>{{ $errors->first('applied_date')}}</td>
+      <td>Format options:
+        <select id="format">
+          <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
+          <option value="mm/dd/yy">Default - mm/dd/yy</option>
+          <option value="d M, y">Short - d M, y</option>
+          <option value="d MM, y">Medium - d MM, y</option>
+          <option value="DD, d MM, yy">Full - DD, d MM, yy</option>
+          <option value="&apos;day&apos; d &apos;of&apos; MM &apos;in the year&apos; yy">With text - 'day' d 'of' MM 'in the year' yy</option>
+        </select>
+      </td>
     </tr>
   
     <tr>
