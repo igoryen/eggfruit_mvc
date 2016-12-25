@@ -48,6 +48,18 @@
       <td>{{ Form::text('company_url') }}</td>
       <td>{{ $errors->first('company_url')}}</td>
     </tr>
+
+    <tr>
+      <td>{{ Form::label('response_value', 'Response Value') }}</td>
+      <td>{{ Form::text('response_value') }}</td>
+      <td>{{ $errors->first('response_value')}}</td>
+    </tr>
+
+    <tr>
+      <td>{{ Form::label('accepted', 'Accepted?') }}</td>
+      <td>{{ Form::text('accepted') }}</td>
+      <td>{{ $errors->first('accepted')}}</td>
+    </tr>
   
     <tr>
       <td>{{ Form::submit('Save the Edit') }}</td>

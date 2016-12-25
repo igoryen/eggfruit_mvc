@@ -14,8 +14,8 @@
       <td>{{ $errors->first('applied_date')}}</td>
       <td>Format options:
         <select id="format">
-          <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
           <option value="mm/dd/yy">Default - mm/dd/yy</option>
+          <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
           <option value="d M, y">Short - d M, y</option>
           <option value="d MM, y">Medium - d MM, y</option>
           <option value="DD, d MM, yy">Full - DD, d MM, yy</option>
@@ -51,6 +51,18 @@
       <td>{{ Form::label('company_url', 'Company URL') }}</td>
       <td>{{ Form::text('company_url') }}</td>
       <td>{{ $errors->first('company_url')}}</td>
+    </tr>
+
+    <tr>
+      <td>{{ Form::label('response_value', 'Response Value') }}</td>
+      <td>{{ Form::text('response_value') }}</td>
+      <td>{{ $errors->first('response_value')}}</td>
+    </tr>
+
+    <tr>
+      <td>{{ Form::label('accepted', 'Accepted?') }}</td>
+      <td>{{ Form::text('accepted') }}</td>
+      <td>{{ $errors->first('accepted')}}</td>
     </tr>
   
     <tr>

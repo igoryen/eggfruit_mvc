@@ -62,11 +62,13 @@
             @endif
           </th>
           <th>Position</th>
+          <th>Response Value</th>
+          <th>Accepted?</th>
         </tr>
       </thead>
       <tbody>
     @foreach($applications as $application)
-    <tr>
+      <tr>
       <td>{{ link_to_route(
                 'applications.edit', 
                 'Edit',
@@ -87,6 +89,8 @@
                   array( 'id'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
+      <td class="applic_table_cell">{{ $application->response_value }}</td>
+      <td class="applic_table_cell">{{ $application->accepted }}</td>
     </tr>
     @endforeach
       </tbody>

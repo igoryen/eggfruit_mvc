@@ -27,7 +27,14 @@
   
     <tr>
       <td>{{ $application->company_url }}</td>
+    </tr>
 
+    <tr>
+      <td>{{ $application->response_value }}</td>
+    </tr>
+
+    <tr>
+      <td>{{ $application->accepted }}</td>
     </tr>
 
   </table>

@@ -11,7 +11,9 @@ class Application extends Eloquent implements RemindableInterface{
       'position_name',
       'job_posting_url',
       'company_name',
-      'company_url'
+      'company_url',
+      'response_value',
+      'accepted'
   ];
   public static $val_rules = [
       'applied_date' => 'required',
