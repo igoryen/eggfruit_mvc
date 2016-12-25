@@ -61,7 +61,29 @@
             }}
             @endif
           </th>
-          <th>Position</th>
+          <th>
+            @if($sortby == 'company' && $order == 'asc'){{
+              link_to_action(
+                'ApplicationsController@index',
+                'Position',
+                array(
+                  'sortby' => 'position_name',
+                  'order' => 'desc'
+                )
+              )
+            }}
+            @else{{
+              link_to_action(
+                'ApplicationsController@index',
+                'Position',
+                array(
+                  'sortby' => 'position_name',
+                  'order' => 'asc'
+                )
+              )
+            }}
+            @endif
+          </th>
           <th>Response Value</th>
           <th>Accepted?</th>
         </tr>
