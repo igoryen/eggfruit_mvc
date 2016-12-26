@@ -15,7 +15,11 @@ body{
   border-style: solid;
   border-color: #0000ff;
   color: gray;
-  font-style: italic;
+  /*font-style: italic;*/
+
+}
+.crossed_row a {
+  color: gray;
 }
 img{
   /*         [direction (inset)] [color] [Horizontal Distance] [Vertical Distance] [size]; 

@@ -1,5 +1,10 @@
 @extends('layouts.default')
+<?php  
+  // $date_today = date_create(date("Y-m-d"));
+  // $date_apply = date_create($application->applied_date);
+  // $time_since = date_diff($date_today, $date_apply);
 
+?>
 
 @section('header')
 @stop
@@ -90,7 +95,18 @@
       </thead>
       <tbody>
     @foreach($applications as $application)
-      <tr>
+      <?php
+        $date_today = date_create(date("Y-m-d"));
+        $date_apply = date_create($application->applied_date);
+        $time_since = date_diff($date_today, $date_apply);
+      ?>
+
+      @if( $application->accepted == "0" || $time_since->days > 30 )
+        <tr class="crossed_row">
+      @else 
+        <tr>
+      @endif
+
       <td>{{ link_to_route(
                 'applications.edit', 
                 'Edit',
