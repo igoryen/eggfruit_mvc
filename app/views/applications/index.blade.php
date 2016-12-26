@@ -1,10 +1,4 @@
 @extends('layouts.default')
-<?php  
-  // $date_today = date_create(date("Y-m-d"));
-  // $date_apply = date_create($application->applied_date);
-  // $time_since = date_diff($date_today, $date_apply);
-
-?>
 
 @section('header')
 @stop
@@ -12,8 +6,6 @@
 @section('content')
 
   <h1>My applications</h1>
-  
-    
   
   @if($applications->count())
     <table>  
