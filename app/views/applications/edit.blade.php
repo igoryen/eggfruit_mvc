@@ -50,6 +50,12 @@
     </tr>
 
     <tr>
+      <td>{{ Form::label('interview_date', 'Interview Date') }}</td>
+      <td>{{ Form::text('interview_date') }}</td>
+      <td>{{ $errors->first('interview_date')}}</td>
+    </tr>
+
+    <tr>
       <td>{{ Form::label('response_value', 'Response Value') }}</td>
       <td>{{ Form::text('response_value') }}</td>
       <td>{{ $errors->first('response_value')}}</td>

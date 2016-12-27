@@ -118,8 +118,10 @@
                   array( 'id'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
-      <td class="applic_table_cell">{{ $application->response_value }}</td>
-      <td class="applic_table_cell">{{ $application->accepted }}</td>
+      <td class="applic_table_interview_cell">Interview:
+                  {{ $application->interview_date}}</td>
+      <td class="applic_table_cell">Response: {{ $application->response_value }}</td>
+      <td class="applic_table_cell">Hired: {{ $application->accepted }}</td>
     </tr>
     @endforeach
       </tbody>
