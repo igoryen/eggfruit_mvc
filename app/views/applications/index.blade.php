@@ -99,22 +99,21 @@
         <tr>
       @endif
 
-      <td>{{ link_to_route(
+      <td class="applic_table_edit_cell">{{ link_to_route(
                 'applications.edit', 
                 'Edit',
                 array($application->id), 
                 array('class' => 'btn btn-info')) 
       }}</td>
-      <td class="applic_table_date_cell">{{  link_to(
-                "/applications/{$application->id}", 
-                $application->applied_date) 
-      }}</td>
-      <td class="applic_table_cell">{{ link_to("{$application->company_url}",
+      <td class="applic_table_date_cell">{{ $application->applied_date }}</td>
+      <td class="applic_table_company_cell">To:
+                  {{ link_to("{$application->company_url}",
                   $application->company_name,
                   array( 'id'=> 'company_url', 'target'=>'blank')
                   ) 
           }}</td> 
-      <td class="applic_table_cell">{{ link_to("{$application->job_posting_url}",
+      <td class="applic_table_cell">As:
+                  {{ link_to("{$application->job_posting_url}",
                   $application->position_name,
                   array( 'id'=> 'job_posting_url', 'target'=>'blank')
                   )

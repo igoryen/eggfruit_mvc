@@ -3,20 +3,38 @@ body{
   /*font-family: "Georgia" , serif ;*/
   font-family: "Verdana", sans-serif;
   font-size: x-small;
+
+
+}
+
+table {
+  -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
+  -moz-columns: 100px 2; /* Firefox */
+  columns: 100px 2;
 }
 .desktop{
   margin-left: 50px;
   margin-right: 50px;
 }
 .crossed_row{
-  display: table-row;
+  /*display: table-row;*/
   background-color: lightgray;
   padding-bottom: 3px;
   border-style: solid;
-  border-color: #0000ff;
+  /*border-color: #0000ff;*/
   color: gray;
   /*font-style: italic;*/
 
+}
+thead {
+  float: left;
+}
+tbody tr {
+  display: block;
+  border: solid 1px gray;
+}
+tbody tr td {
+  display: block;
 }
 .crossed_row a {
   color: gray;
@@ -27,33 +45,48 @@ img{
   box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
 }
 .row{
-  display: table-row;
+  /*display: table-row;*/
+  display: block;
   padding-bottom: 3px;
   /*border-style: solid;*/
   /*border-color: #0000ff;*/
 }
 .applic_table_cell{
-  display: table-cell;
+  /*display: table-cell;*/
 
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-bottom-color: lightgray;
+  /*border-bottom-style: solid;*/
+  /*border-width: 1px;*/
+  /*border-bottom-color: lightgray;*/
+}
+.applic_table_edit_cell {
+  float: right;
 }
 .applic_table_date_cell{
-  display: table-cell;
+  /*display: table-cell;*/
   width: 100px;
   color: red;
 
-  border-bottom-style: solid;
+/*  border-bottom-style: solid;
   border-width: 1px;
-  border-bottom-color: lightgray;
+  border-bottom-color: lightgray;*/
 }
 .applic_table_ivdate_cell{
-  display: table-cell;
+  /*display: table-cell;*/
   width: 100px;
   color: red;
 }
 .applic_table_response_cell{
-  display: table-cell;
+  /*display: table-cell;*/
   width: 100px;
+}
+
+#company_url {
+  /*display: table-cell;*/
+  /*width: 100px;*/
+  color: green;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.crossed_row #company_url {
+  color: gray;
 }
