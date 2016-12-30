@@ -12,16 +12,29 @@ body{
   margin-left: 50px;
   margin-right: 50px;
 }
-.crossed_row{
+.crossed_row {
   /*display: table-row;*/
-  background-color: lightgray;
+  font-weight: normal;
+  background-color: #f2f3f4 ;
   padding-bottom: 3px;
   border-style: solid;
   /*border-color: #0000ff;*/
-  color: gray;
+  
   /*font-style: italic;*/
 
 }
+.crossed_row .company_url {
+  color: gray;
+  font-weight: normal;
+}
+
+.crossed_row .job_posting_url {
+  color: gray;
+}
+.crossed_row .applic_table_date_cell {
+  color: gray;
+}
+
 /*.applied thead {
   float: left;
 }
@@ -83,9 +96,7 @@ img{
   font-weight: bold;
   /*font-size: 1.5em;*/
 }
-.crossed_row * {
-  color: gray;
-}
+
 
 th {
   background-color: lightgray;

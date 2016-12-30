@@ -34,6 +34,10 @@
     </tr>
 
     <tr>
+      <td>{{ $application->response_date }}</td>
+    </tr>
+
+    <tr>
       <td>{{ $application->response_value }}</td>
     </tr>
 

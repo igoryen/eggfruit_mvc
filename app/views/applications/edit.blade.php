@@ -56,6 +56,12 @@
     </tr>
 
     <tr>
+      <td>{{ Form::label('response_date', 'Response Date') }}</td>
+      <td>{{ Form::text('response_date') }}</td>
+      <td>{{ $errors->first('response_date')}}</td>
+    </tr>
+
+    <tr>
       <td>{{ Form::label('response_value', 'Response Value') }}</td>
       <td>{{ Form::text('response_value') }}</td>
       <td>{{ $errors->first('response_value')}}</td>

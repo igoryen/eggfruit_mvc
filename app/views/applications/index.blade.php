@@ -12,11 +12,58 @@
       <thead>
         <tr>
           <th></th>
+          
+          <th>
+            @if($sortby == 'company' && $order == 'asc'){{
+              link_to_action(
+                'ApplicationsController@index',
+                'Company',
+                array(
+                  'sortby' => 'company_name',
+                  'order' => 'desc'
+                )
+              )
+            }}
+            @else{{
+              link_to_action(
+                'ApplicationsController@index',
+                'Company',
+                array(
+                  'sortby' => 'company_name',
+                  'order' => 'asc'
+                )
+              )
+            }}
+            @endif
+          </th>
+          <th>
+            @if($sortby == 'company' && $order == 'asc'){{
+              link_to_action(
+                'ApplicationsController@index',
+                'Position',
+                array(
+                  'sortby' => 'position_name',
+                  'order' => 'desc'
+                )
+              )
+            }}
+            @else{{
+              link_to_action(
+                'ApplicationsController@index',
+                'Position',
+                array(
+                  'sortby' => 'position_name',
+                  'order' => 'asc'
+                )
+              )
+            }}
+            @endif
+          </th>
           <th>
             @if($sortby == 'date' && $order == 'desc'){{
               link_to_action(
                 'ApplicationsController@index',
-                'Date',
+                'Applied',
                 array(
                   'sortby' => 'applied_date',
                   'order' => 'asc'
@@ -26,62 +73,17 @@
             @else{{
               link_to_action(
                 'ApplicationsController@index',
-                'Date',
+                'Applied',
                 array(
                   'sortby' => 'applied_date',
                   'order' => 'desc'
-                )
-              )
-            }}
-            @endif
-          </th>
-          <th>
-            @if($sortby == 'company' && $order == 'asc'){{
-              link_to_action(
-                'ApplicationsController@index',
-                'Company',
-                array(
-                  'sortby' => 'company_name',
-                  'order' => 'desc'
-                )
-              )
-            }}
-            @else{{
-              link_to_action(
-                'ApplicationsController@index',
-                'Company',
-                array(
-                  'sortby' => 'company_name',
-                  'order' => 'asc'
-                )
-              )
-            }}
-            @endif
-          </th>
-          <th>
-            @if($sortby == 'company' && $order == 'asc'){{
-              link_to_action(
-                'ApplicationsController@index',
-                'Position',
-                array(
-                  'sortby' => 'position_name',
-                  'order' => 'desc'
-                )
-              )
-            }}
-            @else{{
-              link_to_action(
-                'ApplicationsController@index',
-                'Position',
-                array(
-                  'sortby' => 'position_name',
-                  'order' => 'asc'
                 )
               )
             }}
             @endif
           </th>
           <th>Interview</th>
+          <th>Response Date</th>
           <th>Response Value</th>
           <th>Accepted?</th>
         </tr>
@@ -106,7 +108,7 @@
                 array($application->id), 
                 array('class' => 'btn btn-info')) 
       }}</td>
-      <td class="applic_table_date_cell">{{ $application->applied_date }}</td>
+      
       <td class="applic_table_company_cell">
                   {{ link_to("{$application->company_url}",
                   $application->company_name,
@@ -116,10 +118,12 @@
       <td class="applic_table_cell">
                   {{ link_to("{$application->job_posting_url}",
                   $application->position_name,
-                  array( 'id'=> 'job_posting_url', 'target'=>'blank')
+                  array( 'class'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
+      <td class="applic_table_date_cell">{{ $application->applied_date }}</td>
       <td class="applic_table_interview_cell">{{ $application->interview_date}}</td>
+      <td class="applic_table_cell">{{ $application->response_date }}</td>
       <td class="applic_table_cell">{{ $application->response_value }}</td>
       <td class="applic_table_cell">{{ $application->accepted }}</td>
     </tr>
