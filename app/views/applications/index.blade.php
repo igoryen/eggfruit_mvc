@@ -122,8 +122,16 @@
                   )
           }}</td>
       <td class="applic_table_date_cell">{{ $application->applied_date }}</td>
-      <td class="applic_table_interview_cell">{{ $application->interview_date}}</td>
-      <td class="applic_table_cell">{{ $application->response_date }}</td>
+      <td class="applic_table_interview_cell">
+        @if( $application->interview_date != "0000-00-00") 
+          {{ $application->interview_date }}
+        @endif
+      </td>
+      <td class="applic_table_cell">
+        @if( $application->response_date != "0000-00-00") 
+          {{ $application->response_date }}
+        @endif
+      </td>
       <td class="applic_table_cell">{{ $application->response_value }}</td>
       <td class="applic_table_cell">{{ $application->accepted }}</td>
     </tr>
