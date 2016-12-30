@@ -8,7 +8,7 @@
   <h1>My applications</h1>
   
   @if($applications->count())
-    <table>  
+    <table class="applied">  
       <thead>
         <tr>
           <th></th>
@@ -81,6 +81,7 @@
             }}
             @endif
           </th>
+          <th>Interview</th>
           <th>Response Value</th>
           <th>Accepted?</th>
         </tr>
@@ -106,22 +107,21 @@
                 array('class' => 'btn btn-info')) 
       }}</td>
       <td class="applic_table_date_cell">{{ $application->applied_date }}</td>
-      <td class="applic_table_company_cell">To:
+      <td class="applic_table_company_cell">
                   {{ link_to("{$application->company_url}",
                   $application->company_name,
-                  array( 'id'=> 'company_url', 'target'=>'blank')
+                  array( 'class'=> 'company_url', 'target'=>'blank')
                   ) 
           }}</td> 
-      <td class="applic_table_cell">As:
+      <td class="applic_table_cell">
                   {{ link_to("{$application->job_posting_url}",
                   $application->position_name,
                   array( 'id'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
-      <td class="applic_table_interview_cell">Interview:
-                  {{ $application->interview_date}}</td>
-      <td class="applic_table_cell">Response: {{ $application->response_value }}</td>
-      <td class="applic_table_cell">Hired: {{ $application->accepted }}</td>
+      <td class="applic_table_interview_cell">{{ $application->interview_date}}</td>
+      <td class="applic_table_cell">{{ $application->response_value }}</td>
+      <td class="applic_table_cell">{{ $application->accepted }}</td>
     </tr>
     @endforeach
       </tbody>

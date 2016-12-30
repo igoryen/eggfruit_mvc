@@ -7,11 +7,7 @@ body{
 
 }
 
-table {
-  -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
-  -moz-columns: 100px 2; /* Firefox */
-  columns: 100px 2;
-}
+
 .desktop{
   margin-left: 50px;
   margin-right: 50px;
@@ -26,19 +22,19 @@ table {
   /*font-style: italic;*/
 
 }
-thead {
+/*.applied thead {
   float: left;
 }
-tbody tr {
+.applied tbody tr {
   display: block;
   border: solid 1px gray;
 }
-tbody tr td {
+.applied tbody tr td {
   display: block;
 }
 .crossed_row a {
   color: gray;
-}
+}*/
 img{
   /*         [direction (inset)] [color] [Horizontal Distance] [Vertical Distance] [size]; 
 */
@@ -80,13 +76,17 @@ img{
   width: 100px;
 }
 
-#company_url {
+.company_url {
   /*display: table-cell;*/
   /*width: 100px;*/
   color: green;
   font-weight: bold;
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
 }
-.crossed_row #company_url {
+.crossed_row * {
   color: gray;
+}
+
+th {
+  background-color: lightgray;
 }
