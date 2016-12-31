@@ -6,6 +6,8 @@
 @section('content')
 
   <h1>My applications</h1>
+
+  <h2>Total applications: {{ $applications->count() }}</h2>
   
   @if($applications->count())
     <table class="applied">  
