@@ -30,6 +30,10 @@
     </tr>
 
     <tr>
+      <td>{{ $application->recruiter }}</td>
+    </tr>
+
+    <tr>
       <td>{{ $application->interview_date }}</td>
     </tr>
 

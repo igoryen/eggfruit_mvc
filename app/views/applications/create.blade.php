@@ -54,6 +54,12 @@
     </tr>
 
     <tr>
+      <td>{{ Form::label('recruiter', 'Recruiter') }}</td>
+      <td>{{ Form::text('recruiter') }}</td>
+      <td>{{ $errors->first('recruiter')}}</td>
+    </tr>
+
+    <tr>
       <td>{{ Form::label('interview_date', 'Interview Date') }}</td>
       <td>{{ Form::text('interview_date') }}</td>
       <td>{{ $errors->first('interview_date')}}</td>

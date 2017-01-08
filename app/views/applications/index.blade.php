@@ -8,7 +8,7 @@
   <h1>My applications</h1>
 
   <h2>Total applications: {{ $applications->count() }} = 2017 ({{  $total17 }}) + 2016 ({{  $total16 }}) + 2015 ({{  $total15 }}) </h2>
-
+  <h3>Refusals: {{ $refusals }} </h3>
 
   @if($applications->count())
     <table class="applied">  
@@ -62,6 +62,7 @@
             }}
             @endif
           </th>
+          <th>Recruiter</th>
           <th>
             @if($sortby == 'date' && $order == 'desc'){{
               link_to_action(
@@ -124,6 +125,7 @@
                   array( 'class'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
+      <td class="applic_table_cell">{{ $application->recruiter }}</td>
       <td class="applic_table_date_cell date">{{ $application->applied_date }}</td>
       <td class="applic_table_interview_cell">
         @if( $application->interview_date != "0000-00-00") 

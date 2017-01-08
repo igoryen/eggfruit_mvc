@@ -12,6 +12,7 @@ class Application extends Eloquent implements RemindableInterface{
       'job_posting_url',
       'company_name',
       'company_url',
+      'recruiter',
       'interview_date',
       'response_date',
       'response_value',
