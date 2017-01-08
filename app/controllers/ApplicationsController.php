@@ -23,9 +23,14 @@ class ApplicationsController extends \BaseController {
     else{
       $applications = $this->application->orderBy('applied_date', 'desc')->get();
     }
+
+    $total17 = $this->application->whereBetween('applied_date', ['2017-01-01', '2017-12-31'])->count();
+    $total16 = $this->application->whereBetween('applied_date', ['2016-01-01', '2016-12-31'])->count();
+    $total15 = $this->application->whereBetween('applied_date', ['2015-01-01', '2015-12-31'])->count();
+
     
     return View::make('applications.index', 
-                      compact('applications', 'sortby', 'order'));
+                      compact('applications', 'sortby', 'order', 'total15','total16','total17'));
   }
 
   /**

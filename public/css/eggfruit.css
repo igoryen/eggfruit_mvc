@@ -68,7 +68,7 @@ img{
   /*border-bottom-color: lightgray;*/
 }
 .applic_table_edit_cell {
-  float: right;
+  vertical-align: middle;
 }
 .applic_table_date_cell{
   /*display: table-cell;*/
@@ -100,4 +100,8 @@ img{
 
 th {
   background-color: lightgray;
+}
+
+.date {
+  text-align: center;
 }

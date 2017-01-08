@@ -7,8 +7,9 @@
 
   <h1>My applications</h1>
 
-  <h2>Total applications: {{ $applications->count() }}</h2>
-  
+  <h2>Total applications: {{ $applications->count() }} = 2017 ({{  $total17 }}) + 2016 ({{  $total16 }}) + 2015 ({{  $total15 }}) </h2>
+
+
   @if($applications->count())
     <table class="applied">  
       <thead>
@@ -104,7 +105,7 @@
         <tr>
       @endif
 
-      <td class="applic_table_edit_cell">{{ link_to_route(
+      <td class="applic_table_edit_cell date">{{ link_to_route(
                 'applications.edit', 
                 'Edit',
                 array($application->id), 
@@ -123,13 +124,13 @@
                   array( 'class'=> 'job_posting_url', 'target'=>'blank')
                   )
           }}</td>
-      <td class="applic_table_date_cell">{{ $application->applied_date }}</td>
+      <td class="applic_table_date_cell date">{{ $application->applied_date }}</td>
       <td class="applic_table_interview_cell">
         @if( $application->interview_date != "0000-00-00") 
           {{ $application->interview_date }}
         @endif
       </td>
-      <td class="applic_table_cell">
+      <td class="applic_table_cell date">
         @if( $application->response_date != "0000-00-00") 
           {{ $application->response_date }}
         @endif
