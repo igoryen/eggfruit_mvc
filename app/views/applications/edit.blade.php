@@ -56,6 +56,12 @@
     </tr>
 
     <tr>
+      <td>{{ Form::label('phone_interview_date', 'Phone Interview Date') }}</td>
+      <td>{{ Form::text('phone_interview_date') }}</td>
+      <td>{{ $errors->first('phone_interview_date')}}</td>
+    </tr>
+
+    <tr>
       <td>{{ Form::label('interview_date', 'Interview Date') }}</td>
       <td>{{ Form::text('interview_date') }}</td>
       <td>{{ $errors->first('interview_date')}}</td>

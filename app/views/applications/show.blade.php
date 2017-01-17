@@ -34,6 +34,10 @@
     </tr>
 
     <tr>
+      <td>{{ $application->phone_interview_date }}</td>
+    </tr>
+
+    <tr>
       <td>{{ $application->interview_date }}</td>
     </tr>
 

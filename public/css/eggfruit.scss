@@ -1,0 +1,142 @@
+body{
+    /*font-family: sans-serif, Calibri;*/
+    /*font-family: "Georgia" , serif ;*/
+    font-family: "Verdana", sans-serif;
+    font-size: x-small;
+
+
+}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color:  #f4f6f6 ;
+}
+
+tr {
+    border-bottom: 1px solid  #f2f3f4 ;
+
+}
+
+
+.panel {
+    background-color: #fef5e7;
+    font-size: 1.2em;
+    padding: 0 10px;
+    margin-bottom: 1em;
+    & * {
+        font-weight: bold;
+    }
+    .today {
+        /*font-size: 1em;*/
+        /*float: left;*/
+    }
+    .todays-number {
+        color: red;
+    }
+    .total {
+        /*float: left;*/
+    }
+    .refusals {
+        color: green;
+        /*float: left;*/
+    }
+    .today, .total, .refusals {
+        padding: 0 10px;
+        box-shadow: black 1px 1px 1px;
+        width: auto;
+    }
+}
+
+.applied {
+    tr {
+        &:hover {
+            background-color: yellow;
+        }
+    }
+}
+
+.desktop{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.crossed_row {
+    /*display: table-row;*/
+    font-weight: normal;
+    background-color: #fdfefe ;
+    padding-bottom: 3px;
+    /*border-style: solid;*/
+    /*border-color: #0000ff;*/
+
+    /*font-style: italic;*/
+    color:   #cacfd2 ;
+
+    .company_url {
+        font-weight: normal;
+    }
+}
+.rejected_row {
+    font-weight: normal;
+    background-color:  #ebf5fb;
+    padding-bottom: 3px;
+
+    .company_url {
+        font-weight: normal;
+    }
+}
+
+img{
+    /*         [direction (inset)] [color] [Horizontal Distance] [Vertical Distance] [size]; 
+    */
+    box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+}
+.row{
+    /*display: table-row;*/
+    display: block;
+    padding-bottom: 3px;
+    /*border-style: solid;*/
+    /*border-color: #0000ff;*/
+}
+
+.edit {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.date {
+    /*display: table-cell;*/
+    width: 100px;
+    color: red;
+    text-align: center;
+}
+
+.hazy {
+    color: gray;
+}
+
+.company {
+    width: 8%;
+}
+
+.interview {
+    /*display: table-cell;*/
+    width: 100px;
+    color: blue;
+}
+
+.response{
+    /*display: table-cell;*/
+    /*width: 100px;*/
+}
+
+.company_url {
+    /*display: table-cell;*/
+    /*width: 100px;*/
+    color: green;
+    font-weight: bold;
+    /*font-size: 1.5em;*/
+}
+
+.crossed_row *, .rejected_row *{
+    color: #a6acaf;
+}
