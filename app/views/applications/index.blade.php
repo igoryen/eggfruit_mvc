@@ -108,7 +108,7 @@
           $time_since = date_diff($date_today, $date_apply);
         ?>
 
-        @if( $time_since->days > 30 && $application->accepted != "0" )
+        @if( $time_since->days > 40 && $application->accepted != "0" )
           <tr class="crossed_row">
         @elseif( $application->accepted == "0" )
           <tr class="rejected_row">
