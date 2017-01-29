@@ -14,6 +14,8 @@
     <div class="total">Total applications: {{ $applications->count() }} = 2017 ({{  $total17 }}) + 2016 ({{  $total16 }}) + 2015 ({{  $total15 }}) </div>
     <div class="refusals">Refusals: {{ $refusals }} = 2017 ({{ $refusals17 }}) + 2016 ({{ $refusals16 }}) + 2015 ({{ $refusals15 }})</div>
     <div class="refusals">Ignores: {{ $ignores }} <<< FIX THIS!!!</div>
+    <div class="interviews">In-Person Interviews: {{ $interviews17 }}</div>
+
   </div>
 
   <div class="table">
