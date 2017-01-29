@@ -16,7 +16,7 @@
   
     <tr>
       <td>{{ Form::label('applied_date', 'App date') }}</td>
-      <td>{{ Form::text('applied_date') }}</td>
+      <td>{{ Form::text('applied_date') }}<span id="datepicker-msg-1"></td>
       <td>{{ $errors->first('applied_date')}}</td>
     </tr>
   
@@ -57,19 +57,19 @@
 
     <tr>
       <td>{{ Form::label('phone_interview_date', 'Phone Interview Date') }}</td>
-      <td>{{ Form::text('phone_interview_date') }}</td>
+      <td>{{ Form::text('phone_interview_date') }}<span id="datepicker-msg-2"></td>
       <td>{{ $errors->first('phone_interview_date')}}</td>
     </tr>
 
     <tr>
       <td>{{ Form::label('interview_date', 'Interview Date') }}</td>
-      <td>{{ Form::text('interview_date') }}</td>
+      <td>{{ Form::text('interview_date') }}<span id="datepicker-msg-3"></td>
       <td>{{ $errors->first('interview_date')}}</td>
     </tr>
 
     <tr>
       <td>{{ Form::label('response_date', 'Response Date') }}</td>
-      <td>{{ Form::text('response_date') }}</td>
+      <td>{{ Form::text('response_date') }}<span id="datepicker-msg-4"></td>
       <td>{{ $errors->first('response_date')}}</td>
     </tr>
 

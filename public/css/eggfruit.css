@@ -1,47 +1,61 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\000031}}
 body {
   /*font-family: sans-serif, Calibri;*/
   /*font-family: "Georgia" , serif ;*/
   font-family: "Verdana", sans-serif;
   font-size: x-small; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\000039}}
 table {
   border-collapse: collapse; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000313}}
 th {
   background-color: #f4f6f6; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000317}}
 tr {
   border-bottom: 1px solid #f2f3f4; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000323}}
 .panel {
   background-color: #fef5e7;
   font-size: 1.2em;
   padding: 0 10px;
   margin-bottom: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000328}}
   .panel * {
     font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000331}}
   .panel .today {
     /*font-size: 1em;*/
     /*float: left;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000335}}
   .panel .todays-number {
     color: red; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000338}}
   .panel .total {
     /*float: left;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000341}}
   .panel .refusals {
     color: green;
     /*float: left;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000345}}
   .panel .today, .panel .total, .panel .refusals {
     padding: 0 10px;
     box-shadow: black 1px 1px 1px;
     width: auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000354}}
 .applied tr:hover {
   background-color: yellow; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000360}}
 .desktop {
   margin-left: 50px;
   margin-right: 50px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000364}}
 .crossed_row {
   /*display: table-row;*/
   font-weight: normal;
@@ -51,21 +65,26 @@ tr {
   /*border-color: #0000ff;*/
   /*font-style: italic;*/
   color: #cacfd2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000375}}
   .crossed_row .company_url {
     font-weight: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000379}}
 .rejected_row {
   font-weight: normal;
   background-color: #ebf5fb;
   padding-bottom: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000384}}
   .rejected_row .company_url {
     font-weight: normal; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000389}}
 img {
   /*         [direction (inset)] [color] [Horizontal Distance] [Vertical Distance] [size]; 
   */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px, inset rgba(0, 0, 0, 0.2) 0px -1px 2px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\0000394}}
 .row {
   /*display: table-row;*/
   display: block;
@@ -73,31 +92,38 @@ img {
   /*border-style: solid;*/
   /*border-color: #0000ff;*/ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003102}}
 .edit {
   vertical-align: middle;
   padding-right: 5px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003106}}
 .date {
   /*display: table-cell;*/
   width: 100px;
   color: red;
   text-align: center; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003113}}
 .hazy {
   color: gray; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003117}}
 .company {
   width: 8%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003121}}
 .interview {
   /*display: table-cell;*/
   width: 100px;
   color: blue; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003127}}
 .response {
   /*display: table-cell;*/
   /*width: 100px;*/ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003132}}
 .company_url {
   /*display: table-cell;*/
   /*width: 100px;*/
@@ -105,5 +131,12 @@ img {
   font-weight: bold;
   /*font-size: 1.5em;*/ }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003140}}
 .crossed_row *, .rejected_row * {
   color: #a6acaf; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/aaa\/ig\/eggfruit_mvc\/public\/css\/eggfruit\.scss}line{font-family:\00003144}}
+#datepicker-msg-1, #datepicker-msg-2, #datepicker-msg-3, #datepicker-msg-4 {
+  color: green; }
+
+/*# sourceMappingURL=eggfruit.css.map */
