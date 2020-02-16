@@ -35,13 +35,17 @@ class ApplicationsController extends \BaseController {
     $refusals15 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2015-01-01', '2015-12-31'])->count();
     $refusals16 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2016-01-01', '2016-12-31'])->count();
     $refusals17 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2017-01-01', '2017-12-31'])->count();
-    $refusals = $refusals16 + $refusals17;
+
+    // $refusals = $refusals16 + $refusals17;
+    $refusals = $this->application->where('accepted', '=', 0)->count();
     $interviews17 = $this->application->whereBetween('interview_date', ['2016-01-01', '2016-12-31'])->count();
 
     $monthago = date('Y-m-d', strtotime("-1 month"));
 
 
-    $ignores = $this->application->where('applied_date', '>', $monthago)->count();
+    // $ignores = $this->application->where('applied_date', '>', $monthago)->count();
+    $ignores = $this->application->where('accepted', '=', '')->count();
+
     // $ignores = $ignores->count();
     
     return View::make('applications.index', 
