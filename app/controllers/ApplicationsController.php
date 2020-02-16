@@ -30,6 +30,7 @@ class ApplicationsController extends \BaseController {
     $total16 = $this->application->whereBetween('applied_date', ['2016-01-01', '2016-12-31'])->count();
     $total15 = $this->application->whereBetween('applied_date', ['2015-01-01', '2015-12-31'])->count();
     $totalApp = $this->application->whereBetween('applied_date', ['2016-01-01', '2017-12-31'])->count();
+    $total = $this->application->get()->count();
     // $refusals = $this->application->where('accepted', '=', 0)->count();
     $refusals15 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2015-01-01', '2015-12-31'])->count();
     $refusals16 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2016-01-01', '2016-12-31'])->count();
@@ -44,7 +45,7 @@ class ApplicationsController extends \BaseController {
     // $ignores = $ignores->count();
     
     return View::make('applications.index', 
-      compact('applications', 'sortby', 'order', 'today', 'asoftoday', 'total15','total16','total17', 'refusals', 'refusals15','refusals16', 'refusals17','ignores',
+      compact('applications', 'sortby', 'order', 'today', 'asoftoday', 'total', 'total15','total16','total17', 'refusals', 'refusals15','refusals16', 'refusals17','ignores',
         'interviews17', 'totalApp'));
   }
 

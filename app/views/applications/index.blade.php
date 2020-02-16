@@ -9,7 +9,8 @@
 
 ?>
   <div class="panel">
-    <h1>My applications</h1>
+    <h1>My applications ({{ $total }})</h1>
+
     <div class="today">Today <span class="hazy">({{ $today }})</span>: <span class="todays-number">{{ $asoftoday }}</span></div>
     <div class="total">Total applications: {{ $totalApp }} = 2017 ({{  $total17 }}) + 2016 ({{  $total16 }})</div>
     <div class="refusals">Refusals: {{ $refusals }} = 2017 ({{ $refusals17 }}) + 2016 ({{ $refusals16 }})</div>
