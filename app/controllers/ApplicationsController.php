@@ -29,10 +29,12 @@ class ApplicationsController extends \BaseController {
     $total17 = $this->application->whereBetween('applied_date', ['2017-01-01', '2017-12-31'])->count();
     $total16 = $this->application->whereBetween('applied_date', ['2016-01-01', '2016-12-31'])->count();
     $total15 = $this->application->whereBetween('applied_date', ['2015-01-01', '2015-12-31'])->count();
-    $refusals = $this->application->where('accepted', '=', 0)->count();
+    $totalApp = $this->application->whereBetween('applied_date', ['2016-01-01', '2017-12-31'])->count();
+    // $refusals = $this->application->where('accepted', '=', 0)->count();
     $refusals15 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2015-01-01', '2015-12-31'])->count();
     $refusals16 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2016-01-01', '2016-12-31'])->count();
     $refusals17 = $this->application->where('accepted', '=', 0)->whereBetween('response_date', ['2017-01-01', '2017-12-31'])->count();
+    $refusals = $refusals16 + $refusals17;
     $interviews17 = $this->application->whereBetween('interview_date', ['2016-01-01', '2016-12-31'])->count();
 
     $monthago = date('Y-m-d', strtotime("-1 month"));
@@ -43,7 +45,7 @@ class ApplicationsController extends \BaseController {
     
     return View::make('applications.index', 
       compact('applications', 'sortby', 'order', 'today', 'asoftoday', 'total15','total16','total17', 'refusals', 'refusals15','refusals16', 'refusals17','ignores',
-        'interviews17'));
+        'interviews17', 'totalApp'));
   }
 
   /**
